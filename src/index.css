@@ -1,0 +1,19 @@
+@import "tailwindcss";
+/* Hide scrollbars but keep scrolling functionality */
+/* Webkit browsers (Chrome, Edge, Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+/* Firefox */
+html, body {
+	scrollbar-width: none; /* hide scrollbar */
+	-ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Optional: preserve focus outline accessibility for keyboard users */
+*:focus {
+	outline-offset: 2px;
+}

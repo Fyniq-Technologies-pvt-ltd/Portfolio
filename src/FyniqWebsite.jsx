@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Code, Smartphone, Brain, Palette, Cloud, TrendingUp, ChevronRight, Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Briefcase, Users, Target, Award, Heart, Zap, Shield, Rocket, ArrowRight, Check, Github, Instagram } from 'lucide-react';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -12,6 +12,10 @@ import ContactPage from './components/ContactPage';
 
 const FyniqWebsite = () => {
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
 
   const services = [
     { icon: <Code className="w-12 h-12" />, title: "Software & Web Development", desc: "Custom web applications built with cutting-edge frameworks and best practices", link: "web-dev" },
@@ -32,27 +36,27 @@ const FyniqWebsite = () => {
   ];
 
   const projects = [
-    { 
-      title: "AI-Powered Healthcare Diagnostics", 
-      tech: ["React", "Python", "TensorFlow", "AWS"], 
+    {
+      title: "AI-Powered Healthcare Diagnostics",
+      tech: ["React", "Python", "TensorFlow", "AWS"],
       desc: "Predictive diagnostics platform reducing diagnosis time by 60%",
       industry: "Healthcare"
     },
-    { 
-      title: "Digital Banking Platform", 
-      tech: ["Flutter", "Node.js", "PostgreSQL", "Kubernetes"], 
+    {
+      title: "Digital Banking Platform",
+      tech: ["Flutter", "Node.js", "PostgreSQL", "Kubernetes"],
       desc: "Secure mobile banking app serving 100K+ active users",
       industry: "Fintech"
     },
-    { 
-      title: "Smart E-Commerce Marketplace", 
-      tech: ["Next.js", "MongoDB", "Redis", "Stripe"], 
+    {
+      title: "Smart E-Commerce Marketplace",
+      tech: ["Next.js", "MongoDB", "Redis", "Stripe"],
       desc: "Multi-vendor platform with AI-powered recommendations",
       industry: "Retail"
     },
-    { 
-      title: "Logistics Optimization Engine", 
-      tech: ["Vue.js", "Django", "ML", "Google Maps API"], 
+    {
+      title: "Logistics Optimization Engine",
+      tech: ["Vue.js", "Django", "ML", "Google Maps API"],
       desc: "Route optimization reducing delivery costs by 35%",
       industry: "Logistics"
     }
@@ -95,10 +99,10 @@ const FyniqWebsite = () => {
 
   const Careers = () => <CareersPage jobs={jobs} />;
 
-  const Contact = () => <ContactPage onSubmit={() => {}} />;
+  const Contact = () => <ContactPage onSubmit={() => { }} />;
 
   const renderPage = () => {
-    switch(currentPage) {
+    switch (currentPage) {
       case 'home': return <Home />;
       case 'about': return <About />;
       case 'services': return <Services />;
@@ -111,14 +115,88 @@ const FyniqWebsite = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#111827] via-[#0a0e1a] to-[#000000] font-sans relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#00F0FF]/5 via-transparent to-transparent pointer-events-none"></div>
-      <div className="relative z-10">
-      <style>{`\n        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');\n        \n        * {\n          font-family: 'Inter', sans-serif;\n        }\n        \n        h1, h2, h3, h4, h5, h6 {\n          font-family: 'Poppins', sans-serif;\n        }\n        \n        .glow-text {\n          text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);\n        }\n        \n        @keyframes float {\n          0%, 100% {\n            transform: translateY(0) translateX(0);\n          }\n          25% {\n            transform: translateY(-20px) translateX(10px);\n          }\n          50% {\n            transform: translateY(-10px) translateX(-10px);\n          }\n          75% {\n            transform: translateY(-15px) translateX(5px);\n          }\n        }\n        \n        @keyframes fade-in {\n          from {\n            opacity: 0;\n            transform: translateY(20px);\n          }\n          to {\n            opacity: 1;\n            transform: translateY(0);\n          }\n        }\n        \n        .animate-fade-in {\n          animation: fade-in 1s ease-out;\n        }\n        \n        ::-webkit-scrollbar {\n          width: 10px;\n        }\n        \n        ::-webkit-scrollbar-track {\n          background: #0A3D62;\n        }\n        \n        ::-webkit-scrollbar-thumb {\n          background: #00F0FF;\n          border-radius: 5px;\n        }\n        \n        ::-webkit-scrollbar-thumb:hover {\n          background: #00c8d4;\n        }\n\n        input::placeholder, textarea::placeholder {\n          color: rgba(176, 176, 176, 0.5);\n        }\n      `}</style>
+    <div className="min-h-screen bg-[#050B14] font-sans relative overflow-x-hidden text-white">
+      {/* Global Background Elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        {/* Main deep glow */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#5b21b6]/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#2563eb]/20 rounded-full blur-[120px]"></div>
+        {/* Secondary accents */}
+        <div className="absolute top-[20%] right-[20%] w-[30%] h-[30%] bg-[#7c3aed]/10 rounded-full blur-[100px]"></div>
+      </div>
 
-  <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>{renderPage()}</main>
-  <Footer setCurrentPage={setCurrentPage} />
+      <div className="relative z-10">
+        <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        * {
+          font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Poppins', sans-serif;
+        }
+        
+        .glow-text {
+          text-shadow: 0 0 20px rgba(139, 92, 246, 0.5); /* Violet-500 glow */
+        }
+
+        .glass-panel {
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+          background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 1s ease-out;
+        }
+        
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #020617; /* Slate-950 */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #4c1d95; /* Violet-900 */
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #6d28d9; /* Violet-700 */
+        }
+
+        ::selection {
+          background: #7c3aed; /* Violet-600 */
+          color: white;
+        }
+        
+        input::placeholder, textarea::placeholder {
+          color: rgba(148, 163, 184, 0.5); /* Slate-400 */
+        }
+      `}</style>
+
+        <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <main>{renderPage()}</main>
+        <Footer setCurrentPage={setCurrentPage} />
       </div>
     </div>
   );

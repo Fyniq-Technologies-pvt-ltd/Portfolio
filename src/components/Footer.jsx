@@ -66,7 +66,7 @@ const Footer = ({ setCurrentPage }) => {
             <h4 className="font-semibold text-lg mb-6 text-white">Follow Us</h4>
             <div className="flex gap-4">
               {[
-                { Icon: Linkedin, href: "https://www.linkedin.com/in/fyniq-technologies-2180763a3/" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/company/fyniq-technologies/" },
                 { Icon: Twitter, href: "https://x.com/fyniqtech" },
                 { Icon: Github, href: "https://github.com/fyniqtechnologies-byte" },
                 { Icon: Instagram, href: "https://www.instagram.com/fyniqtech/" }

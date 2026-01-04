@@ -77,12 +77,12 @@ const FyniqWebsite = () => {
   ];
 
   const jobs = [
-    { title: "Senior Full Stack Developer", dept: "Engineering", location: "Remote", type: "Full-time" },
-    { title: "AI/ML Engineer", dept: "AI Research", location: "Hybrid", type: "Full-time" },
-    { title: "UI/UX Designer", dept: "Design", location: "On-site", type: "Full-time" },
-    { title: "DevOps Engineer", dept: "Infrastructure", location: "Remote", type: "Full-time" },
-    { title: "Flutter Developer", dept: "Mobile", location: "Remote", type: "Contract" },
-    { title: "Digital Marketing Specialist", dept: "Growth", location: "Hybrid", type: "Full-time" }
+    { title: "Senior Full Stack Developer", dept: "Engineering", location: "Remote", type: "Part-time" },
+    { title: "AI/ML Engineer", dept: "AI Research", location: "Remote", type: "Part-time" },
+    { title: "UI/UX Designer", dept: "Design", location: "Remote", type: "Part-time" },
+    { title: "DevOps Engineer", dept: "Infrastructure", location: "Remote", type: "Part-time" },
+    { title: "Flutter Developer", dept: "Mobile", location: "Remote", type: "Part-time" },
+    { title: "Digital Marketing Specialist", dept: "Growth", location: "Remote", type: "Part-time" }
   ];
 
   // Use the dedicated HomePage component and pass handlers/data

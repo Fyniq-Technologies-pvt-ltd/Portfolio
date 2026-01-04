@@ -46,7 +46,19 @@ const CareersPage = ({ jobs }) => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
-            <p className="text-gray-400">Find your next opportunity</p>
+            <p className="text-gray-400 mb-6">Find your next opportunity</p>
+
+            <div className="inline-flex flex-col md:flex-row gap-4 md:gap-8 justify-center items-center bg-white/5 p-4 rounded-xl border border-white/10 backdrop-blur-sm">
+              <div className="flex items-center gap-2 text-purple-300">
+                <Briefcase className="w-4 h-4" />
+                <span className="font-medium">All jobs are part-time and unpaid</span>
+              </div>
+              <div className="hidden md:block w-px h-4 bg-white/10"></div>
+              <div className="flex items-center gap-2 text-indigo-300">
+                <MapPin className="w-4 h-4" />
+                <span className="font-medium">All jobs are remote</span>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-16">
@@ -55,8 +67,8 @@ const CareersPage = ({ jobs }) => {
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 text-sm ${selectedDept === dept
-                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/25'
-                    : 'bg-white/5 text-gray-400 border border-white/10 hover:border-purple-500/50 hover:text-white'
+                  ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/25'
+                  : 'bg-white/5 text-gray-400 border border-white/10 hover:border-purple-500/50 hover:text-white'
                   }`}
               >
                 {dept}

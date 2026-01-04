@@ -156,7 +156,7 @@ const ContactPage = ({ onSubmit }) => {
                   <h3 className="text-xl font-bold text-white mb-6">Follow Us</h3>
                   <div className="flex gap-4">
                     {[
-                      { Icon: Linkedin, href: "https://www.linkedin.com/in/fyniq-technologies-2180763a3/" },
+                      { Icon: Linkedin, href: "https://www.linkedin.com/company/fyniq-technologies/" },
                       { Icon: Twitter, href: "https://x.com/fyniqtech" },
                       { Icon: Github, href: "https://github.com/fyniqtechnologies-byte" },
                       { Icon: Instagram, href: "https://www.instagram.com/fyniqtech/" }

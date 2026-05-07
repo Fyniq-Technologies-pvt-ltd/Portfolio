@@ -5,31 +5,22 @@ import TeamCard from './section/TeamCard';
 const teamData = {
   leadership: [
     {
-      name: "Divyam Kashyap",
-      role: "Founder & Visionary",
-      description: "Driving the core philosophy and long-term vision of Fyniq Technologies. Divyam's leadership focuses on sustainable innovation and creating a culture of excellence.",
+      name: "Karan Sain",
+      role: "Founder",
+      description: "Visionary leader driving the core philosophy and long-term direction of Fyniq Technologies. Karan's entrepreneurial spirit and strategic mindset are the foundation of our growth.",
       category: "LEADERSHIP",
       tag: "FOUNDER",
       year: "2024",
-      image: "/members/divyam_kashyap.png"
+      image: "/members/karan_sain.jpg"
     },
     {
-      name: "Devansh Indoriya",
-      role: "Co-Founder & CEO",
-      description: "Strategizing the technical roadmap and business growth. Devansh oversees the intersection of technology and market impact, ensuring Fyniq remains at the cutting edge.",
+      name: "Vivek Budania",
+      role: "Co-Founder",
+      description: "Co-architecting the vision of Fyniq Technologies with a focus on growth strategies and brand positioning. Vivek connects our technological solutions with the businesses that need them most.",
       category: "LEADERSHIP",
       tag: "CO-FOUNDER",
       year: "2024",
-      image: "/members/devansh_indoriya.jpeg"
-    },
-    {
-      name: "Riya Jangid",
-      role: "Backend Dep. Head",
-      description: "Architecting high-performance server-side systems and database structures. Riya leads our backend engineering with a focus on security and scalability.",
-      category: "LEADERSHIP",
-      tag: "DEPT. HEAD",
-      year: "2025",
-      image: "/members/riya_jangid.jpeg"
+      image: "/members/vivek_budhaniya.jpeg"
     },
     {
       name: "Ajay Singh",
@@ -41,24 +32,51 @@ const teamData = {
       image: "/members/ajay_singh.jpeg"
     },
     {
-      name: "Vivek Budania",
-      role: "Marketing Dep. Head",
-      description: "Spearheading global growth strategies and brand positioning. Vivek connects our technological solutions with the businesses that need them most.",
+      name: "Sudershan Sharma",
+      role: "Social Media Dep. Head",
+      description: "Leading Fyniq's social media presence and digital communication strategy. Driving brand awareness, community engagement, and online growth across all platforms.",
       category: "LEADERSHIP",
       tag: "DEPT. HEAD",
       year: "2025",
-      image: "/members/vivek_budhaniya.jpeg"
+      image: ""
+    },
+    {
+      name: "Divyanshu Purohit",
+      role: "AI Dep. Head",
+      description: "Spearheading artificial intelligence research and implementation at Fyniq. Driving innovation in machine learning, automation, and intelligent systems to deliver next-generation solutions.",
+      category: "LEADERSHIP",
+      tag: "DEPT. HEAD",
+      year: "2025",
+      image: ""
     }
   ],
   leadMembers: [
     {
-      name: "Karan Sain",
-      role: "Mobile App Lead",
-      description: "Full-stack developer with a passion for building scalable and efficient web applications. Driving technical excellence across our development teams.",
+      name: "Divyam Kashyap",
+      role: "Frontend Engineer",
+      description: "Building elegant and high-performance user interfaces. Divyam combines creative design sensibility with technical expertise to deliver exceptional frontend experiences.",
+      category: "DEVELOPMENT",
+      tag: "LEAD",
+      year: "2024",
+      image: "/members/divyam_kashyap.png"
+    },
+    {
+      name: "Devansh Indoriya",
+      role: "Software Engineer",
+      description: "Architecting robust and scalable software solutions. Devansh brings deep technical expertise to drive engineering excellence and innovation across the development stack.",
+      category: "DEVELOPMENT",
+      tag: "LEAD",
+      year: "2024",
+      image: "/members/devansh_indoriya.jpeg"
+    },
+    {
+      name: "Riya Jangid",
+      role: "Software Engineer",
+      description: "Developing high-performance server-side systems and database structures. Riya focuses on security, scalability, and engineering quality across backend services.",
       category: "DEVELOPMENT",
       tag: "LEAD",
       year: "2025",
-      image: "/members/karan_sain.jpg"
+      image: "/members/riya_jangid.jpeg"
     },
     // {
     //   name: "Elena Petrova",

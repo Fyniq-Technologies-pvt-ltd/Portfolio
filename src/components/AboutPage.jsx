@@ -3,108 +3,79 @@ import { Target, Rocket, Users } from 'lucide-react';
 import TeamCard from './section/TeamCard';
 
 const teamData = {
-  leadership: [
-    {
-      name: "Karan Sain",
-      role: "Founder",
-      description: "Visionary leader driving the core philosophy and long-term direction of Fyniq Technologies. Karan's entrepreneurial spirit and strategic mindset are the foundation of our growth.",
-      category: "LEADERSHIP",
-      tag: "FOUNDER",
-      year: "2024",
-      image: "/members/karan_sain.jpg"
-    },
+  coreTeam: [
     {
       name: "Vivek Budania",
-      role: "Co-Founder",
-      description: "Co-architecting the vision of Fyniq Technologies with a focus on growth strategies and brand positioning. Vivek connects our technological solutions with the businesses that need them most.",
+      role: "Founder & Chief Growth Officer (CGO)",
+      description: "Responsible for strategic growth, partnerships, market expansion, brand positioning, business opportunities, and growth strategy.",
       category: "LEADERSHIP",
-      tag: "CO-FOUNDER",
+      tag: "FOUNDER & CGO",
       year: "2024",
       image: "/members/vivek_budhaniya.jpeg"
     },
     {
-      name: "Ajay Singh",
-      role: "Frontend Dep. Head",
-      description: "Crafting responsive and interactive user interfaces with modern frameworks. Ajay ensures that Fyniq's digital products are both beautiful and performant.",
-      category: "LEADERSHIP",
-      tag: "DEPT. HEAD",
-      year: "2025",
-      image: "/members/ajay_singh.jpeg"
-    },
-    {
-      name: "Sudershan Sharma",
-      role: "Social Media Dep. Head",
-      description: "Leading Fyniq's social media presence and digital communication strategy. Driving brand awareness, community engagement, and online growth across all platforms.",
-      category: "LEADERSHIP",
-      tag: "DEPT. HEAD",
-      year: "2025",
-      image: ""
-    },
-    {
-      name: "Divyanshu Purohit",
-      role: "AI Dep. Head",
-      description: "Spearheading artificial intelligence research and implementation at Fyniq. Driving innovation in machine learning, automation, and intelligent systems to deliver next-generation solutions.",
-      category: "LEADERSHIP",
-      tag: "DEPT. HEAD",
-      year: "2025",
-      image: ""
-    }
-  ],
-  leadMembers: [
-    {
-      name: "Divyam Kashyap",
-      role: "Frontend Engineer",
-      description: "Building elegant and high-performance user interfaces. Divyam combines creative design sensibility with technical expertise to deliver exceptional frontend experiences.",
-      category: "DEVELOPMENT",
-      tag: "LEAD",
-      year: "2024",
-      image: "/members/divyam_kashyap.png"
-    },
-    {
       name: "Devansh Indoriya",
-      role: "Software Engineer",
-      description: "Architecting robust and scalable software solutions. Devansh brings deep technical expertise to drive engineering excellence and innovation across the development stack.",
-      category: "DEVELOPMENT",
-      tag: "LEAD",
+      role: "Co-Founder & Chief Executive Officer (CEO)",
+      description: "Responsible for company vision, strategic leadership, product direction, ecosystem planning, major operational decisions, and cross-team alignment.",
+      category: "LEADERSHIP",
+      tag: "CO-FOUNDER & CEO",
       year: "2024",
       image: "/members/devansh_indoriya.jpeg"
     },
     {
       name: "Riya Jangid",
-      role: "Software Engineer",
-      description: "Developing high-performance server-side systems and database structures. Riya focuses on security, scalability, and engineering quality across backend services.",
-      category: "DEVELOPMENT",
-      tag: "LEAD",
+      role: "Chief Technology Officer (CTO)",
+      description: "Responsible for technical leadership, engineering direction, architecture decisions, development standards, technology planning, and product scalability.",
+      category: "TECHNOLOGY",
+      tag: "CTO",
       year: "2025",
       image: "/members/riya_jangid.jpeg"
     },
-    // {
-    //   name: "Elena Petrova",
-    //   role: "Head of AI Research",
-    //   description: "Pushing the boundaries of machine learning and generative AI to deliver intelligent solutions that solve complex predictive challenges.",
-    //   category: "RESEARCH",
-    //   tag: "LEAD",
-    //   year: "2025",
-    //   image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80"
-    // },
-    // {
-    //   name: "James Wilson",
-    //   role: "Lead UI/UX Architect",
-    //   description: "Mastermind behind our design systems, James focuses on creating immersive digital experiences that resonate with users emotionally.",
-    //   category: "DESIGN",
-    //   tag: "LEAD",
-    //   year: "2025",
-    //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80"
-    // },
-    // {
-    //   name: "Priyanka Sharma",
-    //   role: "Senior Project Director",
-    //   description: "Ensuring every client project is delivered with precision, transparency, and the highest standards of quality assurance.",
-    //   category: "OPERATIONS",
-    //   tag: "LEAD",
-    //   year: "2025",
-    //   image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
-    // },
+    {
+      name: "Ajay Singh",
+      role: "Head of Research & Solutions Architecture",
+      description: "Responsible for technical research, scalable solution planning, technology evaluation, system design recommendations, innovation support, and problem-solving strategies.",
+      category: "TECHNOLOGY",
+      tag: "HEAD OF RESEARCH",
+      year: "2025",
+      image: "/members/ajay_singh.jpeg"
+    },
+    {
+      name: "Divyanshu Purohit",
+      role: "AI & Innovation Lead",
+      description: "Responsible for AI integrations, automation systems, GenAI experimentation, AI-powered product innovation, and emerging technology exploration.",
+      category: "TECHNOLOGY",
+      tag: "AI LEAD",
+      year: "2025",
+      image: ""
+    },
+    {
+      name: "Sudarshan Sharma",
+      role: "Chief Marketing Officer (CMO)",
+      description: "Responsible for social media strategy, content management, brand communication, marketing campaigns, community engagement, and digital presence.",
+      category: "MARKETING",
+      tag: "CMO",
+      year: "2025",
+      image: ""
+    },
+    {
+      name: "Karan Sain",
+      role: "Chief Business Relations Officer (CBRO)",
+      description: "Responsible for business networking, strategic connections, client relationships, partner coordination, business onboarding, and external collaborations.",
+      category: "BUSINESS",
+      tag: "CBRO",
+      year: "2024",
+      image: "/members/karan_sain.jpg"
+    },
+    {
+      name: "Divyam Kashyap",
+      role: "Operations & Resource Coordinator",
+      description: "Responsible for internal coordination, workflow management, resource tracking, team operations, execution support, and process organization.",
+      category: "OPERATIONS",
+      tag: "COORDINATOR",
+      year: "2024",
+      image: "/members/divyam_kashyap.png"
+    }
   ]
 };
 
@@ -193,34 +164,16 @@ const AboutPage = ({ values }) => (
       </div>
     </section>
 
-    {/* Leadership Section */}
+    {/* Core Team Section */}
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Leadership</h2>
-          <p className="text-gray-400 text-lg">Guided by visionary leadership</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Core Team</h2>
+          <p className="text-gray-400 text-lg">Guided by visionary leadership and expertise</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
-          {teamData.leadership.map((leader, idx) => (
-            <div key={idx} className="w-full md:w-[calc(33.333%-2rem)] lg:w-[calc(25%-2rem)] max-w-[280px]">
-              <TeamCard {...leader} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Lead Members Section */}
-    <section className="py-20 bg-purple-900/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Lead Members</h2>
-          <p className="text-gray-400 text-lg">The core team driving our success through expertise and innovation</p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8">
-          {teamData.leadMembers.map((member, idx) => (
+          {teamData.coreTeam.map((member, idx) => (
             <div key={idx} className="w-full md:w-[calc(33.333%-2rem)] lg:w-[calc(25%-2rem)] max-w-[280px]">
               <TeamCard {...member} />
             </div>

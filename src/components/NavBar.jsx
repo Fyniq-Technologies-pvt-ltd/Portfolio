@@ -9,7 +9,7 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
     setMobileMenuOpen(false);
   };
 
-  const menuItems = ['Home', 'About', 'Services', 'Industries', 'Projects', 'Careers', 'Contact'];
+  const menuItems = ['Home', 'About', 'Services', 'Industries', 'Portfolio', 'Careers', 'Contact'];
 
   return (
     <nav className="fixed w-full top-0 z-50 glass-panel border-b-0">

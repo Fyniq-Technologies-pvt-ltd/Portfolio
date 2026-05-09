@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Briefcase, MapPin, Users, Brain, Rocket, ArrowRight } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
 
-const CareersPage = ({ jobs }) => {
+const CareersPage = () => {
+  const [jobs, setJobs] = useState([]);
   const [selectedDept, setSelectedDept] = useState('All');
   const departments = ['All', 'Engineering', 'AI Research', 'Design', 'Infrastructure', 'Mobile', 'Growth'];
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const { data, error } = await supabase.from('jobs').select('*').order('id', { ascending: true });
+        if (error) throw error;
+        if (data) setJobs(data);
+      } catch (err) {
+        console.error('Error fetching jobs:', err);
+      }
+    };
+    fetchJobs();
+  }, []);
 
   const filteredJobs = selectedDept === 'All' ? jobs : jobs.filter(job => job.dept === selectedDept);
 
@@ -95,9 +110,9 @@ const CareersPage = ({ jobs }) => {
                     </div>
                   </div>
                 </div>
-                <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/5 text-white rounded-xl hover:bg-purple-600 transition-all duration-300 border border-white/10 font-semibold group-hover:border-purple-500/50">
+                <a href={job.link || '#'} target={job.link ? '_blank' : '_self'} rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/5 text-white rounded-xl hover:bg-purple-600 transition-all duration-300 border border-white/10 font-semibold group-hover:border-purple-500/50">
                   Apply Now <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             ))}
           </div>

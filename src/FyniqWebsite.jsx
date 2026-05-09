@@ -35,32 +35,7 @@ const FyniqWebsite = () => {
     { name: "Manufacturing", icon: "🏭", desc: "Industry 4.0 and smart manufacturing systems" }
   ];
 
-  const projects = [
-    {
-      title: "AI-Powered Healthcare Diagnostics",
-      tech: ["React", "Python", "TensorFlow", "AWS"],
-      desc: "Predictive diagnostics platform reducing diagnosis time by 60%",
-      industry: "Healthcare"
-    },
-    {
-      title: "Digital Banking Platform",
-      tech: ["Flutter", "Node.js", "PostgreSQL", "Kubernetes"],
-      desc: "Secure mobile banking app serving 100K+ active users",
-      industry: "Fintech"
-    },
-    {
-      title: "Smart E-Commerce Marketplace",
-      tech: ["Next.js", "MongoDB", "Redis", "Stripe"],
-      desc: "Multi-vendor platform with AI-powered recommendations",
-      industry: "Retail"
-    },
-    {
-      title: "Logistics Optimization Engine",
-      tech: ["Vue.js", "Django", "ML", "Google Maps API"],
-      desc: "Route optimization reducing delivery costs by 35%",
-      industry: "Logistics"
-    }
-  ];
+
 
   const values = [
     { icon: <Shield className="w-10 h-10" />, title: "Integrity", desc: "Transparent and honest in every interaction with our clients and partners" },
@@ -76,14 +51,7 @@ const FyniqWebsite = () => {
     { icon: <Rocket className="w-8 h-8" />, title: "Scalable Solutions", desc: "Build once, scale infinitely with our future-proof architectures" }
   ];
 
-  const jobs = [
-    { title: "Senior Full Stack Developer", dept: "Engineering", location: "Remote", type: "Part-time" },
-    { title: "AI/ML Engineer", dept: "AI Research", location: "Remote", type: "Part-time" },
-    { title: "UI/UX Designer", dept: "Design", location: "Remote", type: "Part-time" },
-    { title: "DevOps Engineer", dept: "Infrastructure", location: "Remote", type: "Part-time" },
-    { title: "Flutter Developer", dept: "Mobile", location: "Remote", type: "Part-time" },
-    { title: "Digital Marketing Specialist", dept: "Growth", location: "Remote", type: "Part-time" }
-  ];
+
 
   // Use the dedicated HomePage component and pass handlers/data
   // HomePage expects props: setCurrentPage, services
@@ -95,9 +63,9 @@ const FyniqWebsite = () => {
 
   const Industries = () => <IndustriesPage industries={industries} setCurrentPage={setCurrentPage} />;
 
-  const Projects = () => <ProjectsPage projects={projects} setCurrentPage={setCurrentPage} />;
+  const Portfolio = () => <ProjectsPage setCurrentPage={setCurrentPage} />;
 
-  const Careers = () => <CareersPage jobs={jobs} />;
+  const Careers = () => <CareersPage />;
 
   const Contact = () => <ContactPage onSubmit={() => { }} />;
 
@@ -107,7 +75,7 @@ const FyniqWebsite = () => {
       case 'about': return <About />;
       case 'services': return <Services />;
       case 'industries': return <Industries />;
-      case 'projects': return <Projects />;
+      case 'portfolio': return <Portfolio />;
       case 'careers': return <Careers />;
       case 'contact': return <Contact />;
       default: return <Home />;

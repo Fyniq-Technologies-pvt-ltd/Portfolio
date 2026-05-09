@@ -1,85 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Target, Rocket, Users } from 'lucide-react';
 import TeamCard from './section/TeamCard';
+import { supabase } from '../lib/supabaseClient';
 
-const teamData = {
-  coreTeam: [
-    {
-      name: "Vivek Budania",
-      role: "Founder & Chief Growth Officer (CGO)",
-      description: "Responsible for strategic growth, partnerships, market expansion, brand positioning, business opportunities, and growth strategy.",
-      category: "LEADERSHIP",
-      tag: "FOUNDER & CGO",
-      year: "2024",
-      image: "/members/vivek_budhaniya.jpeg"
-    },
-    {
-      name: "Devansh Indoriya",
-      role: "Co-Founder & Chief Executive Officer (CEO)",
-      description: "Responsible for company vision, strategic leadership, product direction, ecosystem planning, major operational decisions, and cross-team alignment.",
-      category: "LEADERSHIP",
-      tag: "CO-FOUNDER & CEO",
-      year: "2024",
-      image: "/members/devansh_indoriya.jpeg"
-    },
-    {
-      name: "Riya Jangid",
-      role: "Chief Technology Officer (CTO)",
-      description: "Responsible for technical leadership, engineering direction, architecture decisions, development standards, technology planning, and product scalability.",
-      category: "TECHNOLOGY",
-      tag: "CTO",
-      year: "2025",
-      image: "/members/riya_jangid.jpeg"
-    },
-    {
-      name: "Ajay Singh",
-      role: "Head of Research & Solutions Architecture",
-      description: "Responsible for technical research, scalable solution planning, technology evaluation, system design recommendations, innovation support, and problem-solving strategies.",
-      category: "TECHNOLOGY",
-      tag: "HEAD OF RESEARCH",
-      year: "2025",
-      image: "/members/ajay_singh.jpeg"
-    },
-    {
-      name: "Divyanshu Purohit",
-      role: "AI & Innovation Lead",
-      description: "Responsible for AI integrations, automation systems, GenAI experimentation, AI-powered product innovation, and emerging technology exploration.",
-      category: "TECHNOLOGY",
-      tag: "AI LEAD",
-      year: "2025",
-      image: ""
-    },
-    {
-      name: "Sudarshan Sharma",
-      role: "Chief Marketing Officer (CMO)",
-      description: "Responsible for social media strategy, content management, brand communication, marketing campaigns, community engagement, and digital presence.",
-      category: "MARKETING",
-      tag: "CMO",
-      year: "2025",
-      image: ""
-    },
-    {
-      name: "Karan Sain",
-      role: "Chief Business Relations Officer (CBRO)",
-      description: "Responsible for business networking, strategic connections, client relationships, partner coordination, business onboarding, and external collaborations.",
-      category: "BUSINESS",
-      tag: "CBRO",
-      year: "2024",
-      image: "/members/karan_sain.jpg"
-    },
-    {
-      name: "Divyam Kashyap",
-      role: "Operations & Resource Coordinator",
-      description: "Responsible for internal coordination, workflow management, resource tracking, team operations, execution support, and process organization.",
-      category: "OPERATIONS",
-      tag: "COORDINATOR",
-      year: "2024",
-      image: "/members/divyam_kashyap.png"
-    }
-  ]
-};
+const AboutPage = ({ values }) => {
+  const [coreTeam, setCoreTeam] = useState([]);
 
-const AboutPage = ({ values }) => (
+  useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        const { data, error } = await supabase.from('members').select('*').order('id', { ascending: true });
+        if (error) throw error;
+        if (data) setCoreTeam(data);
+      } catch (err) {
+        console.error('Error fetching members:', err);
+      }
+    };
+    fetchMembers();
+  }, []);
+
+  return (
   <div className="pt-16">
     {/* Hero Section */}
     <section className="min-h-[50vh] flex items-center justify-center relative overflow-hidden">
@@ -173,7 +113,7 @@ const AboutPage = ({ values }) => (
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
-          {teamData.coreTeam.map((member, idx) => (
+          {coreTeam.map((member, idx) => (
             <div key={idx} className="w-full md:w-[calc(33.333%-2rem)] lg:w-[calc(25%-2rem)] max-w-[280px]">
               <TeamCard {...member} />
             </div>
@@ -193,6 +133,7 @@ const AboutPage = ({ values }) => (
       </div>
     </section>
   </div>
-);
+  );
+};
 
 export default AboutPage;

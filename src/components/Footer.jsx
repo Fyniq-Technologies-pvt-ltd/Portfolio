@@ -57,7 +57,7 @@ const Footer = ({ setCurrentPage }) => {
                 <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-purple-400 mt-1">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span>Pilani<br />Rajasthan, RJ 333031<br />India</span>
+                <span>Gopeshwar<br />Chamoli, Uttarakhand, 246401<br />India</span>
               </div>
             </div>
           </div>
